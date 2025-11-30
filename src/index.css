@@ -5,6 +5,8 @@
 @layer base {
   body {
     @apply bg-darkBg text-slate-300 font-sans antialiased;
+    /* Prevent horizontal scrolling caused by wide elements */
+    overflow-x: hidden;
   }
 
   h1,
@@ -29,4 +31,20 @@
   .section-padding {
     @apply py-20 px-4 md:px-8 lg:px-16 max-w-[90rem] mx-auto;
   }
+}
+
+/* Keep a scrollbar always to avoid page reflow when it appears/disappears */
+html {
+  overflow-y: scroll;
+}
+
+/* Fixes for mobile address bar / vh issues - use min-h rather than exact vh units where possible */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent oversized images from creating horizontal scroll */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
 }

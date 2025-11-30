@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from 'logo.jpg';
 import { Shield, Menu, X } from 'lucide-react';
 
 const Header = () => {
@@ -22,12 +23,12 @@ const Header = () => {
 
     return (
         <header
-            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-darkBg/90 backdrop-blur-md shadow-lg py-4' : 'bg-transparent py-6'
+            className={`fixed top-0 left-0 w-full z-[100] transition-all duration-300 h-16 ${isScrolled ? 'bg-darkBg/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
                 }`}
         >
-            <div className="container mx-auto px-4 md:px-8 flex justify-between items-center">
+            <div className="container mx-auto px-4 md:px-8 flex justify-between items-center h-16">
                 <div className="flex items-center gap-2">
-                    <img src="/logo.jpg" alt="SafeIsNotSecure Logo" className="h-12 w-12 rounded-full object-cover" />
+                    <img src={logo} alt="SafeIsNotSecure Logo" className="h-12 w-12 rounded-full object-cover" />
                     <span className="text-2xl font-bold text-white tracking-tight">
                         Safe<span className="text-neonBlue">IsNotSecure</span>
                     </span>
