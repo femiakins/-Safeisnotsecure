@@ -18,7 +18,7 @@ const Footer = () => {
                         </p>
                         <div className="flex gap-4 mb-6">
                             <a href="#" className="text-slate-400 hover:text-neonBlue transition-colors">
-                                <Twitter className="w-5 h-5" />
+                                                <img src="/logo.svg" alt="SafeIsNotSecure Logo" className="h-12 w-12 rounded-full object-cover" />
                             </a>
                             <a href="#" className="text-slate-400 hover:text-neonBlue transition-colors">
                                 <Linkedin className="w-5 h-5" />
